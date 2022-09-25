@@ -1,0 +1,76 @@
+<div class="conatiner">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12 border-end">
+            <!-- <img src="assets/images/dettolSanitizer.png" class="mx-auto" width="600" height="auto"> -->
+            <div class="mt-4">
+                <lib-ngx-image-zoom [thumbImage]="productDetails['image']" [fullImage]="productDetails['image']" [magnification]="1" [enableScrollZoom]="true"
+                [enableLens]="true" [lensWidth]="130" [lensHeight]="130" class="image"></lib-ngx-image-zoom>
+            </div>
+        </div>
+        <div class="col-5 my-5 mx-5">
+            <small class="my-1">{{productDetails['type'] | titlecase}} / {{productDetails['category'] | titlecase}}</small>
+            <h1 class="heading my-1">{{productDetails['name'] | titlecase}}</h1>
+            <div class="row my-3">
+                <div class="col-5 info">
+                    Seller : {{productDetails['sellerName']}}
+                </div>
+                <div class="col-5 info">
+                    Price : {{productDetails['price']}} Rs
+                </div>
+                <div class="col-5 info my-3">
+                    Manufacturing-date : {{productDetails['manufacturing_date']}}
+                </div>
+                <div class="col-5 info my-3">
+                    Expiring-date : {{productDetails['expiring_date']}}
+                </div>
+                <div class="col-12 my-3">
+                    <h2 style="color: rgb(75, 71, 71);">Qunatity :</h2>
+                    <div class="btn btn-outline-success px-4" style="font-size: 25px;" (click)="onQunatity('remove')">-</div>
+                    <span style="font-size: 25px; color: green;" class="mx-3">{{qunatity}}</span>
+                    <div class="btn btn-outline-success px-4" style="font-size: 25px;" (click)="onQunatity('add')">+</div>
+                </div>
+                <div class="col-12 float-end">
+                    <div class="float-end">
+                        <div class="btn btn-success">Add to cart</div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <h2><b>Our policy:</b></h2>
+                    <div class="row my-1">
+                        <div class="col-1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=45/assets/web/blinkit-promises/10_minute_delivery.png"></div>
+                        <div class="col-9 mx-2" style="margin-top: -5px;">
+                            <p>Superfast Delivery</p>
+                            <p style="margin-top: -6px; color: rgb(102, 97, 97);">Get your order delivered to your doorstep at the earliest from dark stores near you.</p>
+                        </div>
+                    </div>
+
+                    <div class="row my-1">
+                        <div class="col-1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=45/assets/web/blinkit-promises/Best_Prices_Offers.png"></div>
+                        <div class="col-9 mx-2" style="margin-top: -5px;">
+                            <p>Best Prices & Offers</p>
+                            <p style="margin-top: -6px; color: rgb(102, 97, 97);">Cheaper prices than your local supermarket, great cashback offers to top it off.</p>
+                        </div>
+                    </div>
+
+                    <div class="row my-1">
+                        <div class="col-1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=45/assets/web/blinkit-promises/Wide_Assortment.png"></div>
+                        <div class="col-9 mx-2" style="margin-top: -5px;">
+                            <p>Wide Assortment</p>
+                            <p style="margin-top: -6px; color: rgb(102, 97, 97);">Choose from 5000+ products across food, personal care, household & other categories.</p>
+                        </div>
+                    </div>
+
+                    <div class="row my-1">
+                        <div class="col-1"><img src="https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=50,metadata=none,w=45/assets/web/blinkit-promises/Easy_Returns_Refund.png"></div>
+                        <div class="col-9 mx-2" style="margin-top: -5px;">
+                            <p>Easy Returns</p>
+                            <p style="margin-top: -6px; color: rgb(102, 97, 97);">Not satisfied with a product? Return it at the doorstep & get a refund within hours.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div> 
+        
+    </div>
+</div>

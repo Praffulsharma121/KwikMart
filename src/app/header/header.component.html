@@ -1,0 +1,39 @@
+<header class="py-2 mb-1 border-bottom">
+    <div class="container-fluid d-grid align-items-center">
+        <div class="row">
+            <div class="col-lg-2 col-md-3 border-end">
+                <a [routerLink]="['/home-page']"><img src="assets/images/logo2.png" width="200" height="auto"></a>
+            </div>
+            <div class="col-lg-1 col-md-1 mx-md-3">
+                <figure (click)="selectOperationalCity()">
+                    <img src="assets/images/jawahar-circle.png" class="rounded-circle" alt="cover image for tailoring"
+                        style="width: 50px; height: 50px;">
+                    <figcaption class="selectedCity">Jaipur</figcaption>
+                </figure>
+            </div>
+            <div class="col-lg-6 col-md-6 text-center">
+                <form class="w-100 my-3 text-center" role="search">
+                    <input type="search" class="form-control shadow bg-white rounded py-2" placeholder="Search..." aria-label="Search">
+                </form>
+            </div>
+            <div class="col-lg-1 col-md-1 my-md-3" *ngIf="!signIn">
+                <div class="float-end">
+                    <img src="assets/images/login.png" class="btn" width="65px" height="55px" (click)="onProfile()">
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 my-md-3" *ngIf="signIn">
+                <div class="float-end">
+                    <img src="assets/images/login.png" class="btn" width="65px" height="55px" mat-button [matMenuTriggerFor]="menu">
+                </div>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item (click)="logOut()">Log out</button>
+                  </mat-menu>
+            </div>
+            <div class="col-lg-1 col-md-1 my-md-3">
+                <div class="float-end">
+                    <img src="assets/images/shopping-cart.png" alt="" class="btn" width="65px" height="55px" [routerLink]="['/cart']">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
